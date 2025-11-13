@@ -6,16 +6,17 @@
 }
 
 :root {
-    --primary-color: #4a90e2;
-    --secondary-color: #7b68ee;
-    --text-color: #2c3e50;
-    --text-light: #6c757d;
-    --bg-color: #ffffff;
-    --bg-light: #f8f9fa;
-    --bg-dark: #1a1a2e;
-    --border-color: #e9ecef;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --primary-color: #5c0e0e;
+    --secondary-color: #2a0707;
+    --text-color: #ffffff;
+    --nav-link-color: #d9b6b6;
+    --text-light: #8a8a8a;
+    --bg-color: #000000;
+    --bg-light: #050505;
+    --bg-dark: #000000;
+    --border-color: #1a1a1a;
+    --shadow: 0 4px 6px rgba(92, 14, 14, 0.1);
+    --shadow-lg: 0 10px 30px rgba(92, 14, 14, 0.15);
     --transition: all 0.3s ease;
 }
 
@@ -43,9 +44,9 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(92, 14, 14, 0.15);
     z-index: 1000;
     padding: 1rem 0;
 }
@@ -70,7 +71,7 @@ html {
 
 .nav-link {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--nav-link-color);
     font-weight: 500;
     transition: var(--transition);
     position: relative;
@@ -121,7 +122,7 @@ html {
     display: flex;
     align-items: center;
     padding: 100px 0 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #000000 0%, #2a0707 50%, #5c0e0e 100%);
     color: white;
     position: relative;
     overflow: hidden;
@@ -159,7 +160,7 @@ html {
 }
 
 .highlight {
-    color: #ffd700;
+    color: #5c0e0e;
     position: relative;
 }
 
@@ -193,8 +194,8 @@ html {
 }
 
 .btn-primary {
-    background: white;
-    color: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
 }
 
 .btn-primary:hover {
@@ -209,8 +210,8 @@ html {
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
     transform: translateY(-2px);
 }
 
@@ -293,7 +294,7 @@ html {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     border-radius: 2px;
 }
 
@@ -320,6 +321,7 @@ html {
     text-align: center;
     padding: 2rem;
     background: var(--bg-light);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     transition: var(--transition);
 }
@@ -344,7 +346,7 @@ html {
 /* Skills Section */
 .skills {
     padding: 100px 0;
-    background: var(--bg-light);
+    background: var(--bg-color);
 }
 
 .skills-grid {
@@ -354,11 +356,12 @@ html {
 }
 
 .skill-category {
-    background: white;
+    background: var(--bg-light);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 1px solid var(--border-color);
 }
 
 .skill-category:hover {
@@ -380,11 +383,13 @@ html {
 
 .skill-item {
     padding: 0.75rem 1.5rem;
-    background: var(--bg-light);
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 25px;
     font-weight: 500;
     transition: var(--transition);
     cursor: default;
+    color: var(--text-color);
 }
 
 .skill-item:hover {
@@ -406,11 +411,12 @@ html {
 }
 
 .project-card {
-    background: white;
+    background: var(--bg-light);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 1px solid var(--border-color);
 }
 
 .project-card:hover {
@@ -457,7 +463,8 @@ html {
 
 .project-tech span {
     padding: 0.4rem 0.8rem;
-    background: var(--bg-light);
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font-size: 0.85rem;
     color: var(--text-color);
@@ -494,7 +501,7 @@ html {
 /* Contact Section */
 .contact {
     padding: 100px 0;
-    background: var(--bg-light);
+    background: var(--bg-color);
 }
 
 .contact-content {
@@ -534,6 +541,7 @@ html {
 
 .contact-item a:hover {
     text-decoration: underline;
+    color: #7a1a1a;
 }
 
 .social-links {
@@ -547,7 +555,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: var(--bg-light);
+    border: 1px solid var(--primary-color);
     border-radius: 50%;
     color: var(--primary-color);
     transition: var(--transition);
@@ -562,10 +571,12 @@ html {
 }
 
 .contact-form {
-    background: white;
+    background: var(--bg-light);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    border-top: 2px solid var(--primary-color);
 }
 
 .form-group {
@@ -581,12 +592,20 @@ html {
     font-family: inherit;
     font-size: 1rem;
     transition: var(--transition);
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: rgba(92, 14, 14, 0.5);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(92, 14, 14, 0.2);
 }
 
 .form-group textarea {
@@ -656,12 +675,13 @@ html {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: white;
+        background: var(--bg-color);
         width: 100%;
         text-align: center;
         transition: var(--transition);
         box-shadow: var(--shadow-lg);
         padding: 2rem 0;
+        border-top: 1px solid var(--border-color);
     }
 
     .nav-menu.active {
